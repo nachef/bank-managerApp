@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { withSSRGuest } from "../hooks/SSRGuest";
 
 export default function Home() {
   return (
@@ -7,9 +8,10 @@ export default function Home() {
         <title>Homepage</title>
       </Head>
 
-      <main>
-        <h1>Hello World</h1>
-      </main>
+      <main></main>
     </div>
   );
 }
+export const getServerSideProps = withSSRGuest(async () => {
+  return { props: {} };
+});
