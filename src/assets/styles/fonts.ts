@@ -9,32 +9,32 @@ import InterSemiBold from "../fonts/Inter-SemiBold.ttf";
 
 export default createGlobalStyle`
     @font-face {
-        font-family: 'Poppins Black';
+        font-family: 'Inter Black';
         src: url(${InterBlack}) format('truetype');
     }
 
     @font-face {
-        font-family: 'Poppins Bold';
+        font-family: 'Inter Bold';
         src: url(${InterBold}) format('truetype');
     }
     
    @font-face {
-      font-family: 'Poppins Light';
+      font-family: 'Inter Light';
       src: url(${InterLight}) format('truetype');
     }
         
     @font-face {
-      font-family: 'Poppins Medium';
+      font-family: 'Inter Medium';
       src: url(${InterMedium}) format('truetype');
     }
 
     @font-face {
-      font-family: 'Poppins Regular';
+      font-family: 'Inter Regular';
       src: url(${InterRegular}) format('truetype');
      }
 
     @font-face {
-        font-family: 'Poppins SemiBold';
+        font-family: 'Inter SemiBold';
         src: url(${InterSemiBold}) format('truetype');
     }
 `;

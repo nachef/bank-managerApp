@@ -6,7 +6,7 @@ export default {
       secondary: "#F5F5F7",
     },
     text: {
-      primary: "#2F3367",
+      primary: "#000000",
       secondary: "#868AA5",
     },
     icons: {
