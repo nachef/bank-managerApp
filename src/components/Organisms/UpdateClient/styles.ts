@@ -1,16 +1,5 @@
 import styled from "styled-components";
 
-export const Modal = styled.div`
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: flex;
-  overflow: hidden;
-`;
-
 export const Container = styled.div`
   padding: 32px;
 `;
@@ -42,9 +31,9 @@ export const InputsContainer = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  justify-content: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 
   margin-top: 20px;

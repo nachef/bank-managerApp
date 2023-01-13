@@ -1,14 +1,6 @@
 import React, { InputHTMLAttributes, ReactNode, useState } from "react";
 
-import {
-  Container,
-  CustomInput,
-  IconLeft,
-  IconRight,
-  InputWrapper,
-  Label,
-  TextError,
-} from "./styles";
+import * as C from "./styles";
 
 export type InputProps = {
   label?: string;
@@ -41,32 +33,32 @@ const Input = ({
   const [isSecret, setSecret] = useState(secret);
 
   return (
-    <Container value={value}>
-      <InputWrapper
+    <C.Container value={value}>
+      <C.InputWrapper
         isFocus={isFocus}
         isValid={!!isValid}
         isNotValid={!!isNotValid}
       >
         {label && value && (
-          <Label
+          <C.Label
             isFocus={isFocus}
             isValid={!!isValid}
             isNotValid={!!isNotValid}
           >
             {label}
-          </Label>
+          </C.Label>
         )}
         {!!iconLeft && (
-          <IconLeft
+          <C.IconLeft
             isFocus={isFocus}
             isValid={!!isValid}
             isNotValid={!!isNotValid}
             onClick={onClickIconLeft}
           >
             {iconLeft}
-          </IconLeft>
+          </C.IconLeft>
         )}
-        <CustomInput
+        <C.CustomInput
           {...props}
           value={value}
           iconLeft={!!iconLeft}
@@ -87,14 +79,14 @@ const Input = ({
         />
 
         {!!iconRight && !!isSecret && (
-          <IconRight onClick={() => setSecret(!isSecret)}></IconRight>
+          <C.IconRight onClick={() => setSecret(!isSecret)}></C.IconRight>
         )}
         {!!iconRight && (
-          <IconRight onClick={onClickIconRight}>{iconRight}</IconRight>
+          <C.IconRight onClick={onClickIconRight}>{iconRight}</C.IconRight>
         )}
-      </InputWrapper>
-      {error && <TextError>{error}</TextError>}
-    </Container>
+      </C.InputWrapper>
+      {error && <C.TextError>{error}</C.TextError>}
+    </C.Container>
   );
 };
 

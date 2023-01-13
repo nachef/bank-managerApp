@@ -17,7 +17,7 @@ export function withSSRLogin<P extends { [key: string]: any }>(
     if (!token) {
       return {
         redirect: {
-          destination: "/auth/login",
+          destination: "/LoginPage",
           permanent: false,
         },
       };

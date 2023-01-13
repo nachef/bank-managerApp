@@ -32,7 +32,7 @@ const TableCustom = styled.div`
   }
 
   .rdt_TableHeadRow {
-    background-color: ${({ theme }) => theme.colors.others.lightBlue};
+    background-color: ${({ theme }) => theme.colors.background.secondary};
     border-color: ${({ theme }) => theme.colors.utils.border};
     border-radius: 16px 16px 0 0;
     padding: 8px 0;

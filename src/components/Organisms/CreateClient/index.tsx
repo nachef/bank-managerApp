@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { Formik } from "formik";
 
-import Button from "../../Molecules/Button";
-import { Dropdown } from "../DropDown";
+import { Dropdown } from "../DropDownDefault";
 import Input from "../../Molecules/Input";
 import Line from "../Line";
 import Sidebar from "../Sidebar";
@@ -16,10 +15,10 @@ import { Numbers } from "../../../utils/validations";
 import { CreateClientsSchema } from "../../../schemas/ClientRegistration/clients";
 
 import { AiOutlineBank } from "react-icons/ai";
-import { BsChevronCompactLeft } from "react-icons/bs";
-import { BsChevronCompactRight } from "react-icons/bs";
-import { BiLoaderAlt } from "react-icons/bi";
+
 import { BiUser } from "react-icons/bi";
+
+import ClientButton from "../../Atoms/ClientButton";
 
 import * as C from "./styles";
 
@@ -28,13 +27,13 @@ export type CreateCustomerProps = {
   onClose: () => void;
 };
 
-const CreateCustomer = ({ visible, onClose }: CreateCustomerProps) => {
+const CreateClient = ({ visible, onClose }: CreateCustomerProps) => {
   const { newClient } = useClients();
   const [isLoading, setLoading] = useState(false);
   const [banks, setBanks] = useState<string[]>([]);
 
   useEffect(() => {
-    api.get("listBanks").then((response) => {
+    api.get("Banklist").then((response) => {
       const arrayOfBanks = response.data.map(
         (bank: any) => `${bank.code} - ${bank.bank}`
       );
@@ -173,20 +172,9 @@ const CreateCustomer = ({ visible, onClose }: CreateCustomerProps) => {
                 </C.InputsContainer>
               </C.SectionForm>
               <C.ButtonWrapper>
-                <Button
-                  type="button"
-                  title="Cancelar"
-                  onClick={() => {
-                    onClose();
-                    resetForm();
-                  }}
-                  width={50}
-                  disabled={isLoading}
-                />
-                <Button
+                <ClientButton
                   type="submit"
                   title="Cadastrar"
-                  width={50}
                   disabled={
                     !values.name ||
                     !values.documentType ||
@@ -212,4 +200,4 @@ const CreateCustomer = ({ visible, onClose }: CreateCustomerProps) => {
   );
 };
 
-export default CreateCustomer;
+export default CreateClient;

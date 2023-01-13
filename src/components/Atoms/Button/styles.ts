@@ -9,7 +9,7 @@ export const Container = styled.button<ContainerProps>`
   border-radius: 8px;
   outline: none;
   border: none;
-  background: ${({ theme }) => theme.colors.others.green};
+  background: ${({ theme }) => theme.colors.others.lightBlue};
 
   font-family: "Inter Medium";
   font-size: 16px;

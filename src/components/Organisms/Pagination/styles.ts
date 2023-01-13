@@ -32,7 +32,7 @@ export const PageButton = styled.button`
 
   &.active {
     color: ${({ theme }) => theme.colors.others.white};
-    background: ${({ theme }) => theme.colors.others.blue};
+    background: transparent;
   }
 
   &:disabled {
@@ -41,7 +41,7 @@ export const PageButton = styled.button`
   }
 
   & path {
-    stroke: ${({ theme }) => theme.text.secondary};
+    stroke: ${({ theme }) => theme.colors.text.secondary};
   }
 `;
 

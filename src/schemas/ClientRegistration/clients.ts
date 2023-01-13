@@ -19,9 +19,9 @@ export const CreateClientsSchema = yup.object().shape({
   bankName: yup.string().required("o banco é obrigatório."),
   agency: yup
     .string()
-    .required("a agencia é obrigatória.")
-    .min(4, "a agencia deve ter no mínimo 4 dígitos.")
-    .max(4, "a agencia deve ter no máximo 4 dígitos."),
+    .required("a agência é obrigatória.")
+    .min(4, "a agência deve ter no mínimo 4 dígitos.")
+    .max(4, "a agência deve ter no máximo 4 dígitos."),
   account: yup
     .string()
     .required("o numero da conta é obrigatório.")

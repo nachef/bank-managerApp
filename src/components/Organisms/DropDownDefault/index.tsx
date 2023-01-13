@@ -3,15 +3,7 @@ import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { BsChevronUp } from "react-icons/bs";
 
-import {
-  Container,
-  Label,
-  Option,
-  OptionsWrapper,
-  SelectText,
-  SelectWrapper,
-  TextError,
-} from "./styles";
+import * as C from "./styles";
 
 export interface DropdownProps {
   label?: string;
@@ -39,23 +31,23 @@ export const Dropdown = ({
     : placeholder;
 
   return (
-    <Container>
-      <SelectWrapper isFocus={isOpen} onClick={() => setIsOpen(!isOpen)}>
-        {label && value && <Label isFocus={isOpen}>{label}</Label>}
-        <SelectText>
+    <C.Container>
+      <C.SelectWrapper isFocus={isOpen} onClick={() => setIsOpen(!isOpen)}>
+        {label && value && <C.Label isFocus={isOpen}>{label}</C.Label>}
+        <C.SelectText>
           {isOpen || !value ? (
             <p id="placeholder">{placeholder}</p>
           ) : (
             <p>{selectText}</p>
           )}
-        </SelectText>
+        </C.SelectText>
         {isOpen ? <BsChevronUp /> : <BsChevronDown />}
-      </SelectWrapper>
-      {error && <TextError>{error}</TextError>}
+      </C.SelectWrapper>
+      {error && <C.TextError>{error}</C.TextError>}
       {isOpen && (
-        <OptionsWrapper>
+        <C.OptionsWrapper>
           {options.map((option) => (
-            <Option
+            <C.Option
               key={option}
               onClick={() => {
                 setIsOpen(false);
@@ -63,10 +55,10 @@ export const Dropdown = ({
               }}
             >
               <p>{option}</p>
-            </Option>
+            </C.Option>
           ))}
-        </OptionsWrapper>
+        </C.OptionsWrapper>
       )}
-    </Container>
+    </C.Container>
   );
 };

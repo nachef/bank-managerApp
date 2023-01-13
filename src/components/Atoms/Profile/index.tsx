@@ -1,5 +1,6 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+
 import ProfilePicture from "../../../assets/images/avatar.png";
 
 import * as C from "./styles";

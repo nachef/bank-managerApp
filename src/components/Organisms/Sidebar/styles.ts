@@ -21,7 +21,7 @@ export const Overlay = styled.div<OverlayProps>`
     z-index: 50;
     opacity: ${visible ? 1 : 0};
     pointer-events: ${visible ? "all" : "none"};
-    transition: opacity 250ms ease-in-out;
+    transition: opacity 650ms ease-in-out;
     overflow: hidden;
   `}
 `;
@@ -32,8 +32,8 @@ export const SidebarContent = styled.div<OverlayProps>`
     top: 0;
     bottom: 0;
     left: 0;
-    background: ${theme.background.primary};
-    transition: transform 250ms ease-in-out;
+    background: ${theme.colors.background.primary};
+    transition: transform 650ms ease-in-out;
     z-index: 100;
     height: 100%;
     width: 442px;

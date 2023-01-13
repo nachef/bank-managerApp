@@ -12,7 +12,7 @@ export const Container = styled.div`
   }
 
   & path {
-    stroke: ${({ theme }) => theme.text.colors.secondary};
+    stroke: ${({ theme }) => theme.colors.text.secondary};
   }
 `;
 
@@ -26,9 +26,11 @@ export const SelectWrapper = styled.div<SelectWrapperProps>`
   width: 100%;
 
   background-color: ${({ isFocus, theme }) =>
-    isFocus ? theme.background.primary : theme.colors.background.secondary};
+    isFocus
+      ? theme.colors.background.primary
+      : theme.colors.background.secondary};
   border: ${({ isFocus, theme }) =>
-    isFocus ? `3px solid ${theme.types.info}` : "0"};
+    isFocus ? `3px solid ${theme.colors.types.info}` : "0"};
   border-radius: 10px;
 
   outline: 0;
@@ -45,17 +47,17 @@ export const Label = styled.label<SelectWrapperProps>`
 
   border-radius: 10px;
 
-  font-family: "Poppins Medium";
+  font-family: "Inter Medium";
   font-size: 12px;
   line-height: 20px;
   color: ${({ theme, isFocus }) =>
-    isFocus ? theme.text.primary : theme.colors.text.secondary};
+    isFocus ? theme.colors.text.primary : theme.colors.text.secondary};
 
   transition: all 0.2s ease-in-out;
 `;
 
 export const SelectText = styled.p`
-  font-family: "Poppins Medium";
+  font-family: "Inter Medium";
   font-size: 14px;
   line-height: 22px;
   color: ${({ theme }) => theme.colors.text.primary};
@@ -64,7 +66,7 @@ export const SelectText = styled.p`
 
   #placeholder {
     color: ${({ theme }) => theme.colors.text.secondary};
-    font-family: "Poppins Regular";
+    font-family: "Inter Regular";
     font-size: 14px;
     line-height: 22px;
   }
@@ -94,7 +96,7 @@ export const Option = styled.div`
   cursor: pointer;
 
   p {
-    font-family: "Poppins Regular";
+    font-family: "Inter Regular";
     font-size: 14px;
     line-height: 22px;
   }
@@ -105,7 +107,7 @@ export const Option = styled.div`
 `;
 
 export const TextError = styled.p`
-  font-family: "Poppins Regular";
+  font-family: "Inter Regular";
   font-size: 12px;
   line-height: 20px;
 

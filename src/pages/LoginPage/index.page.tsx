@@ -3,18 +3,18 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Formik } from "formik";
 
-import EmailIcon from "../../assets/icons/mail.svg";
-import PasswordIcon from "../../assets/icons/lock.svg";
+import { AiOutlineMail } from "react-icons/ai";
+import { BiLockAlt } from "react-icons/bi";
 import { useAccount } from "../../contexts/logincontext";
 import Input from "../../components/Molecules/Input";
-import Button from "../../components/Molecules/Button";
+import Button from "../../components/Atoms/Button";
 import LoginHeader from "../../components/Molecules/LoginHeader";
 import { LoginSchema } from "../../schemas/Login/login";
 import { withSSRGuest } from "../../hooks/SSRGuest";
-import * as C from "./styles";
-import { NextPage } from "next";
 
-const Login: NextPage = () => {
+import * as C from "./styles";
+
+export default function Login() {
   const router = useRouter();
   const { pushLogin } = useAccount();
   const [isLoading, setLoading] = useState(false);
@@ -52,7 +52,7 @@ const Login: NextPage = () => {
                     placeholder="Digite o e-mail"
                     value={values.email}
                     error={errors.email}
-                    iconLeft={<EmailIcon />}
+                    iconLeft={<AiOutlineMail />}
                     onChange={(e) => {
                       setFieldValue("email", e.target.value);
                     }}
@@ -65,7 +65,7 @@ const Login: NextPage = () => {
                     placeholder="Digite a senha"
                     value={values.password}
                     error={errors.password}
-                    iconLeft={<PasswordIcon />}
+                    iconLeft={<BiLockAlt />}
                     onChange={(e) => {
                       setFieldValue("password", e.target.value);
                     }}
@@ -97,8 +97,8 @@ const Login: NextPage = () => {
       </C.Container>
     </>
   );
-};
-export default Login;
+}
+
 export const getServerSideProps = withSSRGuest(async () => {
   return { props: {} };
 });

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { Container, Overlay, SidebarContent } from "./styles";
+import * as C from "./styles";
 
 export type SidebarProps = {
   visible: boolean;
@@ -10,10 +10,10 @@ export type SidebarProps = {
 
 const Sidebar = ({ visible, onClose, children }: SidebarProps) => {
   return (
-    <Container>
-      <Overlay visible={visible} onClick={() => onClose()} />
-      <SidebarContent visible={visible}>{children}</SidebarContent>
-    </Container>
+    <C.Container>
+      <C.Overlay visible={visible} onClick={() => onClose()} />
+      <C.SidebarContent visible={visible}>{children}</C.SidebarContent>
+    </C.Container>
   );
 };
 

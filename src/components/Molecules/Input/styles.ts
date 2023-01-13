@@ -57,7 +57,7 @@ export const Label = styled.label<InputWrapperProps>`
 
   border-radius: 10px;
 
-  font-family: "Poppins Medium";
+  font-family: "Inter Medium";
   font-size: 12px;
   line-height: 20px;
   color: ${({ theme, isFocus }) =>
@@ -74,7 +74,7 @@ export const CustomInput = styled.input<CustomInputProps>`
       ? theme.colors.background.primary
       : theme.colors.background.secondary};
 
-  font-family: "Poppins Medium";
+  font-family: "Inter Medium";
   font-size: 14px;
   line-height: 22px;
   color: ${({ theme }) => theme.colors.text.primary};
