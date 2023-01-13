@@ -1,4 +1,6 @@
-## This is a Front-end test for Q2 Bank
+<p align="center">
+  <b>Front-end test for Q2 Bank</b>
+  <br />
 
 ## Getting Started
 
