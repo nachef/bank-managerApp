@@ -37,6 +37,13 @@ Technologies used in the project developmemt:
 
 ## Getting Started
 
+## Installation
+
+```bash
+$ npm install
+```
+
+
 First, run the development server:
 
 ```bash
