@@ -25,7 +25,7 @@ export const Container = styled.div<{ value: any }>`
   }
 `;
 
-export const InputWrapper = styled.div<InputWrapperProps>`
+export const InputField = styled.div<InputWrapperProps>`
   position: relative;
   display: flex;
   align-items: center;

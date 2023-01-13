@@ -15,6 +15,12 @@ export const Container = styled.div`
   padding: 32px;
 `;
 
+export const CloseButtonField = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`;
+
 export const Title = styled.h1`
   font-family: "Inter Bold";
   font-size: 22px;
@@ -41,7 +47,7 @@ export const InputsContainer = styled.div`
   margin-top: 40px;
 `;
 
-export const ButtonWrapper = styled.div`
+export const ButtonField = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;

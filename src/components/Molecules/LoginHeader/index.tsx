@@ -8,7 +8,7 @@ interface LoginHeaderProps {
   description: string;
 }
 
-const LoginHeader = ({ title, description }: LoginHeaderProps) => {
+export default function LoginHeader({ title, description }: LoginHeaderProps) {
   return (
     <>
       <C.Container>
@@ -24,6 +24,4 @@ const LoginHeader = ({ title, description }: LoginHeaderProps) => {
       </C.Container>
     </>
   );
-};
-
-export default LoginHeader;
+}

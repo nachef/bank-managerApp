@@ -32,7 +32,7 @@ export const Dropdown = ({
 
   return (
     <C.Container>
-      <C.SelectWrapper isFocus={isOpen} onClick={() => setIsOpen(!isOpen)}>
+      <C.SelectField isFocus={isOpen} onClick={() => setIsOpen(!isOpen)}>
         {label && value && <C.Label isFocus={isOpen}>{label}</C.Label>}
         <C.SelectText>
           {isOpen || !value ? (
@@ -42,10 +42,10 @@ export const Dropdown = ({
           )}
         </C.SelectText>
         {isOpen ? <BsChevronUp /> : <BsChevronDown />}
-      </C.SelectWrapper>
+      </C.SelectField>
       {error && <C.TextError>{error}</C.TextError>}
       {isOpen && (
-        <C.OptionsWrapper>
+        <C.OptionsField>
           {options.map((option) => (
             <C.Option
               key={option}
@@ -57,7 +57,7 @@ export const Dropdown = ({
               <p>{option}</p>
             </C.Option>
           ))}
-        </C.OptionsWrapper>
+        </C.OptionsField>
       )}
     </C.Container>
   );

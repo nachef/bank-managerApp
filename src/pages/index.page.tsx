@@ -3,17 +3,18 @@ import { useEffect, useState } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 
 import Header from "../components/Organisms/Header";
-import { useClients } from "../contexts/clients";
-
 import Input from "../components/Molecules/Input";
-import TableCustom from "../components/Organisms/TableCustom";
-import { FiSearch } from "react-icons/fi";
-import { BiPencil } from "react-icons/bi";
+import Table from "../components/Organisms/TableCustom";
 import { Pagination } from "../components/Organisms/Pagination";
 import CreateCustomer from "../components/Organisms/CreateClient";
-import { withSSRLogin } from "../hooks/withSSRLogin";
 import ClientButton from "../components/Atoms/ClientButton";
 import UpdateClient from "../components/Organisms/UpdateClient";
+
+import { FiSearch } from "react-icons/fi";
+import { BiPencil } from "react-icons/bi";
+
+import { withSSRLogin } from "../hooks/withSSRLogin";
+import { useClients } from "../contexts/clients";
 
 import * as C from "./styles";
 
@@ -96,7 +97,7 @@ export default function ClientsPage() {
               />
             </C.WrapperHeadTable>
 
-            <TableCustom>
+            <Table>
               <DataTable
                 title="Customers"
                 columns={columns}
@@ -110,7 +111,7 @@ export default function ClientsPage() {
                 noHeader
                 responsive
               />
-            </TableCustom>
+            </Table>
           </>
         )}
       </C.Container>

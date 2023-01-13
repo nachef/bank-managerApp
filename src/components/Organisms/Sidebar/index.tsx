@@ -12,7 +12,7 @@ const Sidebar = ({ visible, onClose, children }: SidebarProps) => {
   return (
     <C.Container>
       <C.Overlay visible={visible} onClick={() => onClose()} />
-      <C.SidebarContent visible={visible}>{children}</C.SidebarContent>
+      <C.Content visible={visible}>{children}</C.Content>
     </C.Container>
   );
 };

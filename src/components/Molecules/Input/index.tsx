@@ -14,7 +14,7 @@ export type InputProps = {
   onClickIconRight?: () => void;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-const Input = ({
+export default function Input({
   label,
   value,
   error,
@@ -28,13 +28,13 @@ const Input = ({
   onClickIconLeft,
   onClickIconRight,
   ...props
-}: InputProps) => {
+}: InputProps) {
   const [isFocus, setFocus] = useState(false);
   const [isSecret, setSecret] = useState(secret);
 
   return (
     <C.Container value={value}>
-      <C.InputWrapper
+      <C.InputField
         isFocus={isFocus}
         isValid={!!isValid}
         isNotValid={!!isNotValid}
@@ -84,10 +84,8 @@ const Input = ({
         {!!iconRight && (
           <C.IconRight onClick={onClickIconRight}>{iconRight}</C.IconRight>
         )}
-      </C.InputWrapper>
+      </C.InputField>
       {error && <C.TextError>{error}</C.TextError>}
     </C.Container>
   );
-};
-
-export default Input;
+}

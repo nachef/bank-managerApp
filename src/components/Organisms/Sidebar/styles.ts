@@ -26,7 +26,7 @@ export const Overlay = styled.div<OverlayProps>`
   `}
 `;
 
-export const SidebarContent = styled.div<OverlayProps>`
+export const Content = styled.div<OverlayProps>`
   ${({ visible, theme }) => css`
     position: fixed;
     top: 0;

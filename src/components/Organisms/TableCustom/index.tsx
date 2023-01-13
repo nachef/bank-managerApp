@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const TableCustom = styled.div`
+const Table = styled.div`
   padding: 30px 0;
 
   .rdt_Table {
@@ -47,4 +47,4 @@ const TableCustom = styled.div`
   }
 `;
 
-export default TableCustom;
+export default Table;

@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import { useClients } from "../../../contexts/clients";
 import { UpdateClientSchema } from "../../../schemas/ClientRegistration/clients";
 import api from "../../../services/api";
-import { Numbers } from "../../../utils/validations";
+import { HyphenAndNumbers, Numbers } from "../../../utils/validations";
 import ClientButton from "../../Atoms/ClientButton";
 import Input from "../../Molecules/Input";
 import { Dropdown } from "../DropDownDefault";
@@ -16,6 +16,8 @@ import Line from "../Line";
 import Sidebar from "../Sidebar";
 
 import * as C from "./styles";
+import { CloseButtonField } from "../CreateClient/styles";
+import CloseButton from "../../Atoms/CloseButton";
 
 export type UpdateClientProps = {
   clientData: number | null;
@@ -63,6 +65,14 @@ const UpdateClient = ({ clientData, visible, onClose }: UpdateClientProps) => {
   return (
     <Sidebar visible={visible && !!client} onClose={onClose}>
       <C.Container>
+        <CloseButtonField>
+          <CloseButton
+            title="Fechar"
+            onClick={() => {
+              onClose();
+            }}
+          />
+        </CloseButtonField>
         <C.Title>Atualizar cliente</C.Title>
         {client && (
           <Formik
@@ -89,6 +99,7 @@ const UpdateClient = ({ clientData, visible, onClose }: UpdateClientProps) => {
               handleSubmit,
               setFieldValue,
               setFieldError,
+              resetForm,
               values,
               errors,
             }) => (
@@ -159,7 +170,7 @@ const UpdateClient = ({ clientData, visible, onClose }: UpdateClientProps) => {
                       iconLeft={<AiOutlineBank />}
                       maxLength={12}
                       onChange={(e) => {
-                        const value = Numbers(e.target.value);
+                        const value = HyphenAndNumbers(e.target.value);
                         setFieldValue("account", value);
                       }}
                     />

@@ -16,7 +16,7 @@ export const Container = styled.div`
   }
 `;
 
-export const SelectWrapper = styled.div<SelectWrapperProps>`
+export const SelectField = styled.div<SelectWrapperProps>`
   position: relative;
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@ export const SelectText = styled.p`
   }
 `;
 
-export const OptionsWrapper = styled.div`
+export const OptionsField = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

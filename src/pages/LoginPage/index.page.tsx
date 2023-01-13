@@ -3,14 +3,16 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Formik } from "formik";
 
-import { AiOutlineMail } from "react-icons/ai";
-import { BiLockAlt } from "react-icons/bi";
-import { useAccount } from "../../contexts/logincontext";
 import Input from "../../components/Molecules/Input";
 import Button from "../../components/Atoms/Button";
 import LoginHeader from "../../components/Molecules/LoginHeader";
+
+import { useAccount } from "../../contexts/logincontext";
 import { LoginSchema } from "../../schemas/Login/login";
 import { withSSRGuest } from "../../hooks/SSRGuest";
+
+import { AiOutlineMail } from "react-icons/ai";
+import { BiLockAlt } from "react-icons/bi";
 
 import * as C from "./styles";
 
