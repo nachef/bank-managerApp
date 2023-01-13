@@ -7,8 +7,10 @@ export const Container = styled.button<ContainerProps>`
   width: ${({ width }) => (width ? width : 100)}%;
   height: 50px;
   border-radius: 8px;
+
   outline: none;
   border: none;
+
   background: ${({ theme }) => theme.colors.others.lightBlue};
 
   font-family: "Inter Medium";

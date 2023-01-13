@@ -4,7 +4,7 @@ export const Container = styled.div`
   padding: 0 24px;
 `;
 
-export const WrapperHeadTable = styled.div`
+export const HeaderTableField = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;

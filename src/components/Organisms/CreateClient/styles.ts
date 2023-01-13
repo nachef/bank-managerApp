@@ -16,6 +16,7 @@ export const Container = styled.div`
 `;
 
 export const CloseButtonField = styled.div`
+  padding-left: 30px;
   width: 100%;
   display: flex;
   justify-content: flex-end;

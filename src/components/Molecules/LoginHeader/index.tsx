@@ -1,7 +1,7 @@
 import Image from "next/image";
 import * as C from "./styles";
 
-import Logo from "../../../assets/images/avatar.png";
+import Logo from "../../../assets/images/Logo.png";
 
 interface LoginHeaderProps {
   title: string;
@@ -15,9 +15,9 @@ export default function LoginHeader({ title, description }: LoginHeaderProps) {
         <Image
           src={Logo}
           alt={"Logo"}
-          width={30}
-          height={30}
-          style={{ marginBottom: 20 }}
+          width={200}
+          height={100}
+          style={{ marginBottom: 30 }}
         />
         <C.Title>{title}</C.Title>
         <C.Description>{description}</C.Description>

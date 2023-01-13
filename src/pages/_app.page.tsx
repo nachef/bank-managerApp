@@ -1,7 +1,10 @@
 import type { AppProps } from "next/app";
+
 import { ThemeProvider } from "styled-components";
+
 import theme from "../assets/styles/theme";
 import GlobalFonts from "../assets/styles/fonts";
+
 import { ClientsProvider } from "../contexts/clients";
 import { AccountProvider } from "../contexts/logincontext";
 

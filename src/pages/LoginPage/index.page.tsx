@@ -26,7 +26,7 @@ export default function Login() {
       <C.Container>
         <LoginHeader
           title="Acesse sua conta"
-          description="Preencha os dados de acesso abaixo"
+          description="Preencha os dados abaixo"
         />
         <C.FormField>
           <Formik

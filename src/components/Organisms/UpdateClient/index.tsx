@@ -105,7 +105,7 @@ const UpdateClient = ({ clientData, visible, onClose }: UpdateClientProps) => {
             }) => (
               <form onSubmit={handleSubmit}>
                 <C.SectionForm>
-                  <C.TitleSection>Cadastro pessoal</C.TitleSection>
+                  <C.TitleSection>Informações pessoais</C.TitleSection>
                   <C.InputsContainer>
                     <Input
                       name="name"
@@ -133,7 +133,7 @@ const UpdateClient = ({ clientData, visible, onClose }: UpdateClientProps) => {
                 </C.SectionForm>
                 <Line />
                 <C.SectionForm>
-                  <C.TitleSection>Cadastro bancário</C.TitleSection>
+                  <C.TitleSection>Informações bancárias</C.TitleSection>
                   <C.InputsContainer>
                     <Dropdown
                       label="Banco"

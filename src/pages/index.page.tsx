@@ -81,7 +81,7 @@ export default function ClientsPage() {
         />
         {clients && (
           <>
-            <C.WrapperHeadTable>
+            <C.HeaderTableField>
               <ClientButton
                 title="Adicionar"
                 width={10}
@@ -95,7 +95,7 @@ export default function ClientsPage() {
                 iconLeft={<FiSearch />}
                 onChange={(e) => setSearch(e.target.value)}
               />
-            </C.WrapperHeadTable>
+            </C.HeaderTableField>
 
             <Table>
               <DataTable
