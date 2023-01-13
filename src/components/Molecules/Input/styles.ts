@@ -43,7 +43,7 @@ export const InputWrapper = styled.div<InputWrapperProps>`
           ? theme.colors.types.success
           : isNotValid
           ? theme.colors.types.error
-          : theme.colors.others.green};
+          : theme.colors.others.lightBlue};
   }
 `;
 

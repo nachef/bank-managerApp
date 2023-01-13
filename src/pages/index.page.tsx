@@ -1,14 +1,18 @@
 import Head from "next/head";
 import { withSSRGuest } from "../hooks/SSRGuest";
+import Client from "./ClientsPage/index.page";
+import Login from "./LoginPage/index.page";
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Homepage</title>
+        <title>Q2 Test</title>
       </Head>
 
-      <main></main>
+      <main>
+        <Client />
+      </main>
     </div>
   );
 }

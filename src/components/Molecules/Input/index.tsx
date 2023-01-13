@@ -9,7 +9,6 @@ import {
   Label,
   TextError,
 } from "./styles";
-import Showpassword from "../../../assets/icons/Show-password.svg";
 
 export type InputProps = {
   label?: string;

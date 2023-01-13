@@ -1,17 +1,20 @@
 import React, { useState } from "react";
+
 import { useRouter } from "next/router";
 import { Formik } from "formik";
+
 import EmailIcon from "../../assets/icons/mail.svg";
 import PasswordIcon from "../../assets/icons/lock.svg";
 import { useAccount } from "../../contexts/logincontext";
 import Input from "../../components/Molecules/Input";
-import Button from "../../components/Atoms/Button";
+import Button from "../../components/Molecules/Button";
 import LoginHeader from "../../components/Molecules/LoginHeader";
 import { LoginSchema } from "../../schemas/Login/login";
 import { withSSRGuest } from "../../hooks/SSRGuest";
 import * as C from "./styles";
+import { NextPage } from "next";
 
-export default function Login() {
+const Login: NextPage = () => {
   const router = useRouter();
   const { pushLogin } = useAccount();
   const [isLoading, setLoading] = useState(false);
@@ -94,8 +97,8 @@ export default function Login() {
       </C.Container>
     </>
   );
-}
-
+};
+export default Login;
 export const getServerSideProps = withSSRGuest(async () => {
   return { props: {} };
 });

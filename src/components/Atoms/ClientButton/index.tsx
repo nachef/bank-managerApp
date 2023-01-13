@@ -7,10 +7,8 @@ export type ButtonProps = {
   width?: number;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = ({ title, width, ...props }: ButtonProps) => (
-  <C.Container {...props} width={width}>
-    <text>Entrar</text>
-  </C.Container>
+const ClientButton = ({ title, width, ...props }: ButtonProps) => (
+  <C.Container {...props}>{title}</C.Container>
 );
 
-export default Button;
+export default ClientButton;
