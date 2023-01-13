@@ -20,6 +20,11 @@
 
 </p>
 
+## Description
+
+This project consists of creating a system with the objective of listing/updating data
+bank accounts of the platform's clients. The first page has a login system that connects the user to it. The second page consists of a table with the name, documented, bank, branch and account information of registered customers.
+
 Technologies used in the project developmemt:
 
 - [Next.js](https://nextjs.org/)
