@@ -37,7 +37,7 @@ Technologies used in the project developmemt:
 
 ## Getting Started
 
-## Installation
+Installation
 
 ```bash
 $ npm install
