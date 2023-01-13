@@ -74,6 +74,23 @@ function Numbers(phrase: string) {
   return removedSpecialCharacters;
 }
 
+function HyphenAndNumbers(phrase: string) {
+  const removedNumbers = phrase.replace(/\D/g, "");
+  const removedSpecialCharacters = removedNumbers.replace(
+    /[&/\\#,+()$~%.'":*?<>{}[\]@!]/g,
+    ""
+  );
+
+  if (removedSpecialCharacters.length <= 1) {
+    return removedSpecialCharacters;
+  }
+
+  const lastTwoNumbers = removedSpecialCharacters.slice(-1);
+  const restOfNumbers = removedSpecialCharacters.slice(0, -1);
+
+  return restOfNumbers.concat("-", lastTwoNumbers);
+}
+
 function Letters(phrase: string) {
   const removedNumbers = phrase.replace(/[\d]/g, "");
   const removedSpecialCharacters = removedNumbers.replace(
@@ -97,6 +114,7 @@ export {
   validationDate,
   validationName,
   Numbers,
+  HyphenAndNumbers,
   Letters,
   LettersAndNumbers,
 };
