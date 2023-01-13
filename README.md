@@ -47,7 +47,7 @@ $ npm install
 First, run the development server:
 
 ```bash
-# dev prodution
+# run development
 npm run dev
 
 # build production
