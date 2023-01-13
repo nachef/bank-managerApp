@@ -6,8 +6,12 @@ import React, {
   useState,
 } from "react";
 
-import api from "../services/api/api";
-import { getStorage, removeStorage, setStorage } from "../services/api/storage";
+import api from "../services/api";
+import {
+  getStorage,
+  removeStorage,
+  setStorage,
+} from "../services/storage/index";
 
 import { destroyCookie, parseCookies, setCookie } from "nookies";
 import { toast } from "react-toastify";
@@ -64,6 +68,7 @@ export function AccountProvider({ children }: AccountProviderProps) {
         email,
         password,
       });
+      console.log(data);
 
       setCookie(undefined, "@q2:password", data.accessToken, {
         maxAge: 14 * 24 * 60 * 60,

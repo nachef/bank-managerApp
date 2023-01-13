@@ -1,8 +1,7 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
 
 import { toast } from "react-toastify";
-
-import api from "../services/api/api";
+import api from "../services/api";
 
 export type LoginProps = {
   email: string;
@@ -132,7 +131,7 @@ export function ClientsProvider({ children }: ClientsProviderProps) {
   );
 }
 
-export function useCustomers() {
+export function useClients() {
   const context = useContext(ClientsContext);
   return context;
 }
