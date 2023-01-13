@@ -17,6 +17,6 @@ export const Container = styled.button`
     opacity: 0.9;
   }
   @media (max-width: 900px) {
-    width: 100%;
+    width: 64%;
   }
 `;
