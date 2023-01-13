@@ -47,11 +47,12 @@ $ npm install
 First, run the development server:
 
 ```bash
+# dev prodution
 npm run dev
-# or
-yarn dev
+
 # build production
 $ npm run build
+
 # run production
 $ npm run start
 ```
