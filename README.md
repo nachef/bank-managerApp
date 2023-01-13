@@ -29,6 +29,7 @@ Technologies used in the project developmemt:
 
 - [Next.js](https://nextjs.org/)
 - [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [React-Dom](https://pt-br.reactjs.org/docs/react-dom.html)
 - [Styled-Components](https://www.styled-components.com/)
 - [Axios](https://axios-http.com/)
