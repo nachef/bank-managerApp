@@ -1,7 +1,7 @@
 <p align="center">
-  <h1>Front-end test for Q2 Bank</h1>
-  <br />
-  </p>
+    <h1 align="center">Front-end test for Q2 Bank</h1>
+  </a>
+</p>
 
 ## Getting Started
 
