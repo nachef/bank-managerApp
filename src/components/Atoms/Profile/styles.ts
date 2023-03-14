@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  width: 200px;
-  height: 50px;
+  width: 300px;
   margin-right: 20px;
 
   font-family: "Inter Semibold";
@@ -12,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
 `;
+
 export const AvatarField = styled.div`
   margin-right: 30px;
   cursor: pointer;

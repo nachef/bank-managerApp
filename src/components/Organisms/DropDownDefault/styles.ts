@@ -30,7 +30,7 @@ export const SelectField = styled.div<SelectWrapperProps>`
       ? theme.colors.background.primary
       : theme.colors.background.secondary};
   border: ${({ isFocus, theme }) =>
-    isFocus ? `3px solid ${theme.colors.types.info}` : "0"};
+    isFocus ? `3px solid ${theme.colors.others.green}` : "0"};
   border-radius: 10px;
 
   outline: 0;

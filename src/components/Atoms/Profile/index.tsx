@@ -15,7 +15,7 @@ const Profile = () => {
           style={{ width: "50px", height: "50px", borderRadius: "50px" }}
         />
       </C.AvatarField>
-      <text>Bem-vindo Q2 Teste!</text>
+      <text>Bem-vindo ao Bank Register Manager!</text>
     </C.Container>
   );
 };

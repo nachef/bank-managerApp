@@ -38,6 +38,6 @@ export const CreateAccount = styled.p`
   font-size: 16px;
   font-family: "Inter Medium";
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.others.lightBlue};
+  color: ${({ theme }) => theme.colors.others.green};
   margin-left: 5px;
 `;

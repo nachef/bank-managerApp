@@ -19,7 +19,7 @@ export const TitleSection = styled.h1`
   font-family: "Inter SemiBold";
   font-size: 16px;
   line-height: 24px;
-  color: ${({ theme }) => theme.colors.others.blue};
+  color: ${({ theme }) => theme.colors.others.green};
 `;
 
 export const InputsContainer = styled.div`

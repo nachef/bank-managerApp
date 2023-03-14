@@ -6,7 +6,7 @@ export const Container = styled.button`
   border-radius: 10px;
   outline: none;
   border: none;
-  background: ${({ theme }) => theme.colors.others.lightBlue};
+  background: ${({ theme }) => theme.colors.others.green};
 
   font-family: "Inter Medium";
   font-size: 16px;

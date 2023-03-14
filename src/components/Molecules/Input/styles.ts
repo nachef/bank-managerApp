@@ -43,7 +43,7 @@ export const InputField = styled.div<InputWrapperProps>`
           ? theme.colors.types.success
           : isNotValid
           ? theme.colors.types.error
-          : theme.colors.others.lightBlue};
+          : theme.colors.others.green};
   }
 `;
 
