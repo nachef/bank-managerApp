@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center">Front-end test for Q2 Bank</h1>
+    <h1 align="center">Bank Account Manager</h1>
   </a>
 </p>
 
