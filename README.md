@@ -27,13 +27,13 @@ bank accounts of the platform's clients. The first page has a login system that 
 
 You can log with
 
-Email
+<strong>Email<strong/>
 
 ```bash
 nathan@teste.com
 ```
 
-Password
+<strong>Password<strong/>
 
 
 ```bash
